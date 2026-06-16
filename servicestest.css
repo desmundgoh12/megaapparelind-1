@@ -271,7 +271,7 @@
 @media (max-width: 1300px) {
     .intro-hero-visual {
         width: 60vw;
-        max-width: 400px;
+        max-width: 500px;
         aspect-ratio: 1 / 1;
     }
 }
@@ -280,6 +280,16 @@
     .intro-hero-container {
         flex-direction: column;
         text-align: center; 
+    }
+
+    
+}
+
+@media (max-width: 700px) {
+    .intro-hero-visual {
+        width: 80vw;
+        min-width: 300px;
+        aspect-ratio: 1 / 1;
     }
 }
 
