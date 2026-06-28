@@ -157,10 +157,25 @@ function dragEnd(){
 
   const cardWidth = cards[0].offsetWidth + 20;
 
-  current = Math.round(
-    -currentTranslate / cardWidth
-  );
+  const movedBy = currentTranslate - previousTranslate;
+  //sensitivity is 40px
+  const sensitivity = 40;
 
+  // 3. Get the exact decimal index of where the slider is currently sitting
+  let rawIndex = -currentTranslate / cardWidth;
+
+  if (movedBy < -sensitivity) {
+    // Swiped left 
+    current = Math.ceil(rawIndex);
+  } else if (movedBy > sensitivity) {
+    // Swiped right 
+    current = Math.floor(rawIndex);
+  } else {
+    // No swipe
+    current = Math.round(rawIndex);
+  }
+
+  // 5. Ensure the index doesn't go out of bounds
   current = Math.max(
     0,
     Math.min(current, cards.length - 1)
