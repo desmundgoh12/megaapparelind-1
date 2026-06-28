@@ -36,7 +36,6 @@
   bottom: 0;
   left: 0;
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
     url('location/Factory1.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -74,7 +73,7 @@
 }
 
 .contact-box {
-  max-width: 600px;
+  max-width: 500px;
   background: white;
   border-radius: 20px;
   padding: 40px;
